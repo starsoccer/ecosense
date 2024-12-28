@@ -1,0 +1,3 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Ecosense Repo
+url: 'https://github.com/starsoccer/ecosense'

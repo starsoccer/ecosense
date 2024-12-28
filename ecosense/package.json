@@ -1,0 +1,8 @@
+{
+  "name": "ecosense",
+  "packageManager": "yarn@3.3.0",
+  "dependencies": {
+    "express": "^4.21.2",
+    "pino": "^9.6.0"
+  }
+}
