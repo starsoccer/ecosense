@@ -10,3 +10,5 @@
 !.yarn/cache
 #.pnp.*
 ecosense/.yarn/cache
+ecosense/node_modules
+ecosense/config.json

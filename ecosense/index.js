@@ -1,16 +1,17 @@
-const config = require(process.env.CONFIG_PATH)
+import pino from 'pino';
+import express from 'express';
+import fs from 'node:fs';
 
-global.log_level = config.log_level;
-global.logger = require('pino')({level: config.log_level});
+const config = JSON.parse(fs.readFileSync(process.env.CONFIG_PATH || "./config.json", 'utf8'));
+const logger = pino({level: config.log_level});
 
-const express = require('express')
 const app = express()
-const port = 3000
 
 app.put('/*', (req, res) => {
   console.log('Got a put', req, res);
-})
+  // https://embeddedartistry.com/blog/2024/11/04/reclaim-your-data-freeing-a-wi-fi-sensor-from-the-cloud/#Replacing-Their-Servers-With-Our-Own
+});
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(config.port, () => {
+  console.log(`Example app listening on port ${config.port}`)
 })
