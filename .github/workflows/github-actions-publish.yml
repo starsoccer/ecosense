@@ -23,7 +23,8 @@ jobs:
         uses: home-assistant/builder@master
         with:
           args: |
-            --all \
+            --amd64 \
+            --aarch64 \
             --docker-hub "ghcr.io/starsoccer" \
             --image "ecosense/{arch}" \
             --target ecosense
