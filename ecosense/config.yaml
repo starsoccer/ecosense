@@ -1,6 +1,6 @@
 name: "Ecosense"
 description: "Ecosense"
-version: "0.0.2"
+version: "0.0.3"
 slug: "ecosense"
 image: "ghcr.io/starsoccer/ecosense/{arch}"
 arch:
